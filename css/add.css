@@ -435,11 +435,11 @@ body  {
     flex: 1;
     height: 50.5vh;
     width: 100%;
-    background-color: rgb(9, 9, 9);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .product-stock-content {
@@ -449,7 +449,83 @@ body  {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    visibility: hidden;
+    border: 4px solid var(--cor-items);
+}
+
+.product-stock-content-stock {
+    width: 100%;
+    height: 15vh;
+    background-color: green;
+    display: flex;
+    
+}
+
+.product-info {
+    width: 16.6%;
+    height: 100%;
+    background-color: aqua;
+}
+
+.product-info-text {
+    width: 100%;
+    height: 30%;    
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.name-stock-content {
+    width: 100%;
+    height: 6vh;
+    background-color: var(--cor-items);
+    color: white;
+    font-size: 2.7vh;
+    display: flex;
+    
+}
+
+.name-stock-content-id {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right:2px solid rgb(3,222,151) ;
+}
+
+.name-stock-content-name {
+    width: 16.7%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right:2px solid rgb(3,222,151) ;
+}
+
+.name-stock-content-date {
+    width: 20.7%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right:2px solid rgb(3,222,151)  ;
+}
+
+.name-stock-content-peso {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ProductRow {
+    width: 100%;
+    height: 6vh;
+    background-color: green;
+    display: flex;
 }
 
 .close-add-menu {
@@ -517,7 +593,13 @@ body  {
     justify-content: center;
     align-items: center;
     color: black;
+    font-size: 2vh;
 }
+
+.add-menu-content-inputs input:focus {
+    border: 3px  solid rgb(25,161,73);
+}
+
 
 .add-menu-content-inputs label {
     display: flex;

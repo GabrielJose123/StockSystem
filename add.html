@@ -94,7 +94,7 @@
             </div>
 
             <div class="search-content">
-                <div class="search-content-input-content">
+             <div class="search-content-input-content">
                     <div class="items-search-content">
                         <div class="input-search">
                             <div class="input-content">
@@ -117,8 +117,46 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-content">
-                    <div class="product-stock-content">
+            <div class="product-content">
+                    <div class="product-stock-content" id="product-stock-content">
+
+                        <div class="name-stock-content">
+                            <div class="name-stock-content-name">Nome</div> 
+                            <div class="name-stock-content-id">Id</div> 
+                            <div class="name-stock-content-name">Grupo</div> 
+                            <div class="name-stock-content-name">Sub-Grupo</div> 
+                            <div class="name-stock-content-date">Data de Coleta</div> 
+                            <div class="name-stock-content-peso">Peso</div> 
+                        </div>
+
+                       
+                     <!-- <div class="product-stock-content-stock">
+                            <div class="product-info">
+                                <div class="product-info-text"><p>Nome</p></div>
+                            </div>
+
+                            <div class="product-info">
+                                <div class="product-info-text"><p>Id</p></div>
+                            </div>
+
+                            <div class="product-info">
+                                <div class="product-info-text"><p>Grupo</p></div>
+                            </div>
+
+                            <div class="product-info">
+                                <div class="product-info-text"><p>Sub-grupo</p></div>
+                            </div>
+
+                            <div class="product-info">
+                                <div class="product-info-text"><p>Data de coleta</p></div>
+                            </div>
+
+                            <div class="product-info">
+                                <div class="product-info-text"><p>Peso</p></div>
+                            </div>
+                        -->
+                            
+                        </div>
                         
                     </div>
                 </div>
@@ -142,7 +180,7 @@
 
                         <label for="Nome">
                             Nome
-                            <input type="text" name=""  id="add-input">
+                            <input type="text" name=""  id="add-input" class="">
                         </label>
 
                         <label for="Nome">
@@ -183,7 +221,7 @@
                                 <p>Gerar Id</p>
                             </button>
 
-                            <button class="btn-cad">
+                            <button class="btn-cad" onclick="saveProduct()">
                                 <p>Cadastrar</p>
                             </button>
                     </div>

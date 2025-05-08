@@ -60,11 +60,41 @@ function GerarId(tamanho = 6){
     let resultado = "";
 
     for (let i = 0; i < tamanho; i++) {
-        const randomIndex = Math.floor(Math.random() * allChars.length)
+        const randomIndex = Math.floor(Math.random() * allChars.length);
         resultado += allChars[randomIndex]
     }
     
     document.getElementById("add-input-id").value = resultado
 }
 
+const ShowProduct = document.getElementById("product-stock-content");
+
+function saveProduct() {
+    
+
+    const productRow = document.createElement("div");
+
+    const NameCol = document.createElement("div"); NameCol.classList.add('name-stock-content-name')
+
+    const IdCol = document.createElement("div"); IdCol.classList.add('name-stock-content-id')
+
+    const GroupCol = document.createElement("div"); GroupCol.classList.add('name-stock-content-name')
+
+    const SubGroupCol = document.createElement("div"); SubGroupCol.classList.add('name-stock-content-name')
+
+    const DateCol = document.createElement("div"); DateCol.classList.add('name-stock-content-date')
+
+    const WeightCol = document.createElement("div"); WeightCol.classList.add('name-stock-content-peso')
+
+    productRow.classList.add('ProductRow')
+
+    productRow.appendChild(NameCol);
+    productRow.appendChild(IdCol);
+    productRow.appendChild(GroupCol);
+    productRow.appendChild(SubGroupCol);
+    productRow.appendChild(DateCol);
+    productRow.appendChild(WeightCol);
+
+    ShowProduct.appendChild(productRow)
+}
 

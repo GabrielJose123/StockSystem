@@ -122,7 +122,7 @@ html,body {
 .image-box {
     height: 50%;
     width: 50%;
-    background-color: black;
+
 }
 
 
@@ -308,7 +308,6 @@ html,body {
 .ordenate-text {
     width: 80%;
     height: 100%;
-    background-color: var(--cor-items);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -411,11 +410,11 @@ html,body {
     flex: 1;
     height: 50.5vh;
     width: 100%;
-    background-color: rgb(9, 9, 9);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
 }
 
 .product-stock-content {
@@ -426,4 +425,5 @@ html,body {
     display: flex;
     flex-direction: column;
     visibility: hidden;
+    display: none;
 }

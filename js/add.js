@@ -2,7 +2,9 @@
 
 const burgerBarClick = document.getElementById("burger-bar")
 
-
+function Element(id) {
+    return document.getElementById(`${id}`)
+}
 
 function ChangeImage(elementClick,ElementChange,Image1,Image2) {
     let clickElement = false;
@@ -16,11 +18,8 @@ function ChangeImage(elementClick,ElementChange,Image1,Image2) {
             clickElement = false;
         }
     })
-        
 }
-
 //mudar seta Ordenar
-
 const ordenate = document.getElementById("ordenate-button")
 
 const ordenateImage = document.getElementById("ordenate-image")
@@ -36,16 +35,28 @@ function openAddMenu() {
 
     if (addMenuClick == false) {
         AddMenu.style.display = "block"
-        document.getElementById("add-input").value = ""
+        Element("add-input-name").value = ""
+        Element("add-input-Group").value = ""
+        Element("add-input-Sub").value = ""
+        Element("add-input-date").value = ""
+        Element("add-input-peso").value = ""
         document.getElementById("add-input-id").value = ""
         addMenuClick = true
+        
     }else {
-        AddMenu.style.display = "none"
+       AddMenu.style.display = "none"
         addMenuClick = false
+        console.log(varButtonId)
+       
     }
+    
 }
 
+
+
 const Close = document.getElementById("close")
+
+const Idbutton = Element("btn-cad")
 
 const letters = "abcdefghijklmnopqrstuvwxyz"
 
@@ -55,36 +66,62 @@ const numbers = "12345678910"
 
 const allChars = letters + letterShift + numbers;
 
+let Id;
+
+let varButtonId = false;
+
 function GerarId(tamanho = 6){
 
-    let resultado = "";
+    if (varButtonId == false) {
+        let resultado = "";
 
-    for (let i = 0; i < tamanho; i++) {
+        for (let i = 0; i < tamanho; i++) {
         const randomIndex = Math.floor(Math.random() * allChars.length);
         resultado += allChars[randomIndex]
+        document.getElementById("add-input-id").value = resultado
+        }
+        Id = resultado
+
+        Idbutton.disabled = "false"
+        
+        varButtonId = true;
+    }else {
+        varButtonId = false;
+        Idbutton.disabled = "true"
     }
-    
-    document.getElementById("add-input-id").value = resultado
+        
+    console.log(varButtonId)
 }
 
 const ShowProduct = document.getElementById("product-stock-content");
 
 function saveProduct() {
     
-
     const productRow = document.createElement("div");
 
     const NameCol = document.createElement("div"); NameCol.classList.add('name-stock-content-name')
 
+    NameCol.innerHTML = Element("add-input-name").value
+
     const IdCol = document.createElement("div"); IdCol.classList.add('name-stock-content-id')
+
+    IdCol.innerHTML = Id
 
     const GroupCol = document.createElement("div"); GroupCol.classList.add('name-stock-content-name')
 
+    GroupCol.innerHTML = Element("add-input-Group").value
+
     const SubGroupCol = document.createElement("div"); SubGroupCol.classList.add('name-stock-content-name')
 
+    SubGroupCol.innerHTML = Element("add-input-Sub").value
+
     const DateCol = document.createElement("div"); DateCol.classList.add('name-stock-content-date')
+    
+    DateCol.innerHTML = Element("add-input-date").value
 
     const WeightCol = document.createElement("div"); WeightCol.classList.add('name-stock-content-peso')
+
+    WeightCol.innerHTML =  Element("add-input-peso").value + "g"
 
     productRow.classList.add('ProductRow')
 
@@ -94,7 +131,12 @@ function saveProduct() {
     productRow.appendChild(SubGroupCol);
     productRow.appendChild(DateCol);
     productRow.appendChild(WeightCol);
-
     ShowProduct.appendChild(productRow)
+
+    Id = ""
+
+    IdbuttonVar = false;
+
+    openAddMenu()
 }
 

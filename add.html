@@ -180,7 +180,7 @@
 
                         <label for="Nome">
                             Nome
-                            <input type="text" name=""  id="add-input" class="">
+                            <input type="text" name=""  id="add-input-name" class="" maxlength="15">
                         </label>
 
                         <label for="Nome">
@@ -194,12 +194,12 @@
                         
                         <label for="Nome">
                             <p>Grupo</p>
-                            <input type="text" name=""  id="add-input">
+                            <input type="text" name=""  id="add-input-Group" maxlength="14">
                         </label>
 
                         <label for="Nome">
                             
-                           <p>Sub-Grupo</p> <input type="text" name=""  id="add-input">
+                           <p>Sub-Grupo</p> <input type="text" name=""  id="add-input-Sub" maxlength="14">
                         </label>
 
                     </div>
@@ -207,21 +207,21 @@
                     <div class="add-menu-content-inputs">
                         <label for="Nome">
                             
-                        <p>Data Coleta</p>    <input type="date" name=""  id="add-input">
+                        <p>Data Coleta</p>    <input type="date" name=""  id="add-input-date" >
                         </label>
 
                         <label for="Nome">
                             <p>Peso</p>
-                            <input type="number" name=""  id="add-input"oninput="this.value = this.value.slice(0,2)">
+                            <input type="number" name=""  id="add-input-peso" oninput="this.value = this.value.slice(0,3)">
                         </label>
                     </div>
 
                     <div class="add-btn">
-                            <button class="btn-id" onclick="GerarId()">
+                            <button class="btn-id" onclick="GerarId()" id="btn-cad" >
                                 <p>Gerar Id</p>
                             </button>
 
-                            <button class="btn-cad" onclick="saveProduct()">
+                            <button class="btn-cad" onclick="saveProduct()" >
                                 <p>Cadastrar</p>
                             </button>
                     </div>

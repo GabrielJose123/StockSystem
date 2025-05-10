@@ -44,9 +44,11 @@ function openAddMenu() {
         addMenuClick = true
         
     }else {
-       AddMenu.style.display = "none"
+        AddMenu.style.display = "none"
         addMenuClick = false
         console.log(varButtonId)
+        varButtonId.disabled = false;
+        varButtonId = false; 
        
     }
     
@@ -82,48 +84,48 @@ function GerarId(tamanho = 6){
         }
         Id = resultado
 
-        Idbutton.disabled = "false"
+        Idbutton.disabled = false
         
         varButtonId = true;
-    }else {
-        varButtonId = false;
-        Idbutton.disabled = "true"
-    }
-        
+    }     
     console.log(varButtonId)
 }
 
-const ShowProduct = document.getElementById("product-stock-content");
+const ShowProduct = document.getElementById("product-content-stock");
+
+let ProductRowDiv;
 
 function saveProduct() {
-    
+    Idbutton.disabled = true;
+    varButtonId = false;
+
     const productRow = document.createElement("div");
+    productRow.classList.add('ProductRow');
+  
 
-    const NameCol = document.createElement("div"); NameCol.classList.add('name-stock-content-name')
+    const NameCol = document.createElement("div");
+    NameCol.classList.add('name-stock-content-name');
+    NameCol.innerHTML = Element("add-input-name").value;
 
-    NameCol.innerHTML = Element("add-input-name").value
+    const IdCol = document.createElement("div");
+    IdCol.classList.add('name-stock-content-id');
+    IdCol.innerHTML = Id;
 
-    const IdCol = document.createElement("div"); IdCol.classList.add('name-stock-content-id')
+    const GroupCol = document.createElement("div");
+    GroupCol.classList.add('name-stock-content-name');
+    GroupCol.innerHTML = Element("add-input-Group").value;
 
-    IdCol.innerHTML = Id
+    const SubGroupCol = document.createElement("div");
+    SubGroupCol.classList.add('name-stock-content-name');
+    SubGroupCol.innerHTML = Element("add-input-Sub").value;
 
-    const GroupCol = document.createElement("div"); GroupCol.classList.add('name-stock-content-name')
+    const DateCol = document.createElement("div");
+    DateCol.classList.add('name-stock-content-date');
+    DateCol.innerHTML = Element("add-input-date").value;
 
-    GroupCol.innerHTML = Element("add-input-Group").value
-
-    const SubGroupCol = document.createElement("div"); SubGroupCol.classList.add('name-stock-content-name')
-
-    SubGroupCol.innerHTML = Element("add-input-Sub").value
-
-    const DateCol = document.createElement("div"); DateCol.classList.add('name-stock-content-date')
-    
-    DateCol.innerHTML = Element("add-input-date").value
-
-    const WeightCol = document.createElement("div"); WeightCol.classList.add('name-stock-content-peso')
-
-    WeightCol.innerHTML =  Element("add-input-peso").value + "g"
-
-    productRow.classList.add('ProductRow')
+    const WeightCol = document.createElement("div");
+    WeightCol.classList.add('name-stock-content-peso');
+    WeightCol.innerHTML = Element("add-input-peso").value + "g";
 
     productRow.appendChild(NameCol);
     productRow.appendChild(IdCol);
@@ -131,12 +133,35 @@ function saveProduct() {
     productRow.appendChild(SubGroupCol);
     productRow.appendChild(DateCol);
     productRow.appendChild(WeightCol);
-    ShowProduct.appendChild(productRow)
 
-    Id = ""
+    ShowProduct.appendChild(productRow);
 
-    IdbuttonVar = false;
+    productRow.addEventListener('click', () => {
+        if (productRow.style.backgroundColor == "rgb(255, 255, 255)") {
+            productRow.style.backgroundColor = "rgb(255, 88, 88)"
+        }else {
+            productRow.style.backgroundColor = "rgb(255, 255, 255)"
+        }
+        
+        
+    });
 
-    openAddMenu()
+    Id = "";
+    openAddMenu();
 }
+
+
+function exluideStock() {
+
+    const CatchProduct = ShowProduct.querySelectorAll("*")
+
+    CatchProduct.forEach(element => {
+        if (getComputedStyle(element).backgroundColor == "rgb(255, 88, 88)") {
+            element.remove()
+        }
+    });
+
+}
+
+
 

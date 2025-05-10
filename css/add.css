@@ -439,23 +439,21 @@ body  {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-y: auto;
     
 }
 
 .product-stock-content {
     width: 80%;
-    height: 100%;
+    height: 100vh;
     background-color: white;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    border: 4px solid var(--cor-items);
 }
-
 .product-stock-content-stock {
     width: 100%;
     height: 15vh;
-    background-color: green;
     display: flex;
     
 }
@@ -476,9 +474,16 @@ body  {
     
 }
 
+.product-content-stock {
+    height: 60vh;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .name-stock-content {
     width: 100%;
-    height: 6vh;
+    height:8vh;
     background-color: var(--cor-items);
     color: white;
     font-size: 2.7vh;
@@ -527,6 +532,8 @@ body  {
     background-color: rgb(255, 255, 255);
     display: flex;
     border-bottom: 2px solid black;
+    min-height: 6vh;
+    cursor: pointer;
 }
 
 .close-add-menu {

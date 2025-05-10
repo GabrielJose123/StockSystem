@@ -1,238 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/add.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>Controle de Estoque</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/add.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Controle de Estoque</title>
 </head>
 <body>
-    <div class="section">
-        <div class="section-bash-open" id="SideBash">
-            <div class="burger-bar">
-                <div class="burger-bar-container">
-                    <div class="burger-bar-container-container">
-                        <img class="bar" src="/icons/Menu.svg" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <div class="bash-items-container" id="bash-items-container">
-                <hr style="height: 2px; background-color: rgb(3,222,151); border: none;">
-                <a href="/"> <div class="bash-tems"><div class="items-bach"><div class="items-bash-image-content"><img src="/icons/icone1.png" alt=""></div>Inicio</div></div></a>
-                <hr style="height: 2px; background-color: rgb(3,222,151); border: none;">
-                <a href="/add.html"><div class="bash-tems"><div class="items-bach"><div class="items-bash-image-content3"><img src="/icons/adicionar.png" alt=""></div>Adicionar</div></div></a>
-                <hr style="height: 2px; background-color: rgb(3,222,151); border: none;">
-                <a href="/cad.html"><div class="bash-tems"><div class="items-bach"><div class="items-bash-image-content3"><img src="/icons/export.png" alt=""></div>Cadastrar</div></div></a>
-                <hr style="height: 2px; background-color: rgb(3,222,151); border: none;">
-                <a href="/classf.html"><div class="bash-tems"><div class="items-bach"><div class="items-bash-image-content3"><img src="/icons/etiqueta.png" alt=""></div>Classificar</div></div></a>
-                <hr style="height: 2px; background-color: rgb(3,222,151); border: none;">
-                <a href="/baixas.html"><div class="bash-tems"><div class="items-bach"><div class="items-bash-image-content2"><img src="/icons/baixas.png" alt=""></div>Baixas</div></div></a>
-                <hr style="height: 2px; background-color: rgb(3,222,151); border: none;">
-
-                <div class="image-content">
-                    <div class="image-box"></div>
-                </div>
-            </div>
-
-            
-
-          <!-- <div class="image-content" id="image-content">
-                <div class="image-content-vector">
-                    <img src="/icons/recebido 1(1).svg" alt="">
-                </div>
-            </div>
-        -->
+  <div class="section">
+    <div class="section-bash-open" id="SideBash">
+      <div class="burger-bar">
+        <div class="burger-bar-container">
+          <div class="burger-bar-container-container">
+            <img class="bar" src="/icons/Menu.svg" alt="">
+          </div>
         </div>
-        <div class="section-content">
-            <div class="title">
+      </div>
 
-                <div class="title-image-content">
-                    <img src="/icons/LogoGreenly.png" alt="">
-                </div>
+      <div class="bash-items-container" id="bash-items-container">
+        <hr style="height: 2px; background-color: rgb(3,222,151); border: none;">
+        <a href="/">
+          <div class="bash-tems">
+            <div class="items-bach">
+              <div class="items-bash-image-content"><img src="/icons/icone1.png" alt=""></div>
+              Inicio
             </div>
-           
-
-            <div class="items-content">
-                <div class="items">
-                    <div class="content-items" onclick="openAddMenu()">
-
-                        <div class="text-content">
-
-                            <div><p>Adicionar</p></div> 
-                         </div>
-
-                         <div class="items-content-image1">
-
-                            <div class="items-image-content1">
-                                <img src="/icons/Símbolo de Adição Verde-fotor-bg-remover-2025050711116(1).png" alt="">
-                            </div>
-
-                         </div>
-
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="content-items">
-                        
-                        <div class="text-content">
-
-                            <div><p>Excluir</p></div> 
-                         </div>
-
-                         <div class="items-content-image">
-
-                            <div class="items-image-content">
-                                <img src="/icons/Ícone de lixeira com X(1).png" alt="">
-                            </div>
-
-                         </div>
-
-                    </div>
-                </div>
+          </div>
+        </a>
+        <hr style="height: 2px; background-color: rgb(3,222,151); border: none;">
+        <a href="/add.html">
+          <div class="bash-tems">
+            <div class="items-bach">
+              <div class="items-bash-image-content3"><img src="/icons/adicionar.png" alt=""></div>
+              Adicionar
             </div>
-
-            <div class="search-content">
-             <div class="search-content-input-content">
-                    <div class="items-search-content">
-                        <div class="input-search">
-                            <div class="input-content">
-                                <div class="input-items">
-                                    <button class="button-search"><img src="/icons/Search icon.svg" alt=""></button><input class="search" type="search" name="" id="search" placeholder="Pesquise por Produtos">
-                                </div>
-                                <div class="input-ordenate">
-                                    <div class="input-ordenate-button">
-                                        <div class="ordenate-text">
-                                            <p>Ordenar</p>
-                                        </div>
-                                        <hr>
-                                        <div class="ordenate-button" id="ordenate-button">
-                                            <img id="ordenate-image" src="/icons/image(1).png" alt="">
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <div class="product-content">
-                    <div class="product-stock-content" id="product-stock-content">
-
-                        <div class="name-stock-content">
-                            <div class="name-stock-content-name">Nome</div> 
-                            <div class="name-stock-content-id">Id</div> 
-                            <div class="name-stock-content-name">Grupo</div> 
-                            <div class="name-stock-content-name">Sub-Grupo</div> 
-                            <div class="name-stock-content-date">Data de Coleta</div> 
-                            <div class="name-stock-content-peso">Peso</div> 
-                        </div>
-
-                       
-                     <!-- <div class="product-stock-content-stock">
-                            <div class="product-info">
-                                <div class="product-info-text"><p>Nome</p></div>
-                            </div>
-
-                            <div class="product-info">
-                                <div class="product-info-text"><p>Id</p></div>
-                            </div>
-
-                            <div class="product-info">
-                                <div class="product-info-text"><p>Grupo</p></div>
-                            </div>
-
-                            <div class="product-info">
-                                <div class="product-info-text"><p>Sub-grupo</p></div>
-                            </div>
-
-                            <div class="product-info">
-                                <div class="product-info-text"><p>Data de coleta</p></div>
-                            </div>
-
-                            <div class="product-info">
-                                <div class="product-info-text"><p>Peso</p></div>
-                            </div>
-                        -->
-                            
-                        </div>
-                        
-                    </div>
-                </div>
+          </div>
+        </a>
+        <hr style="height: 2px; background-color: rgb(3,222,151); border: none;">
+        <a href="/cad.html">
+          <div class="bash-tems">
+            <div class="items-bach">
+              <div class="items-bash-image-content3"><img src="/icons/export.png" alt=""></div>
+              Cadastrar
             </div>
-
-            <div class="add-menu" id="add-menu">
-                
-                <div class="close-add-menu">
-                    <div class="close-image-content">
-                        <img onclick="openAddMenu()" id="close" src="/icons/fechar.png" alt="">
-                    </div>
-                </div>
-
-                <div class="add-menu-text">
-                
-                    <p>Adicionar Produto</p>
-                </div>
-
-                <div class="add-menu-content">
-                    <div class="add-menu-content-inputs">
-
-                        <label for="Nome">
-                            Nome
-                            <input type="text" name=""  id="add-input-name" class="" maxlength="15">
-                        </label>
-
-                        <label for="Nome">
-                            Id
-                            <input type="text" name=""  id="add-input-id" disabled>
-                        </label>
-
-                    </div>
-
-                    <div class="add-menu-content-inputs">
-                        
-                        <label for="Nome">
-                            <p>Grupo</p>
-                            <input type="text" name=""  id="add-input-Group" maxlength="14">
-                        </label>
-
-                        <label for="Nome">
-                            
-                           <p>Sub-Grupo</p> <input type="text" name=""  id="add-input-Sub" maxlength="14">
-                        </label>
-
-                    </div>
-
-                    <div class="add-menu-content-inputs">
-                        <label for="Nome">
-                            
-                        <p>Data Coleta</p>    <input type="date" name=""  id="add-input-date" >
-                        </label>
-
-                        <label for="Nome">
-                            <p>Peso</p>
-                            <input type="number" name=""  id="add-input-peso" oninput="this.value = this.value.slice(0,3)">
-                        </label>
-                    </div>
-
-                    <div class="add-btn">
-                            <button class="btn-id" onclick="GerarId()" id="btn-cad" >
-                                <p>Gerar Id</p>
-                            </button>
-
-                            <button class="btn-cad" onclick="saveProduct()" >
-                                <p>Cadastrar</p>
-                            </button>
-                    </div>
-
-                </div>
+          </div>
+        </a>
+        <hr style="height: 2px; background-color: rgb(3,222,151); border: none;">
+        <a href="/classf.html">
+          <div class="bash-tems">
+            <div class="items-bach">
+              <div class="items-bash-image-content3"><img src="/icons/etiqueta.png" alt=""></div>
+              Classificar
             </div>
+          </div>
+        </a>
+        <hr style="height: 2px; background-color: rgb(3,222,151); border: none;">
+        <a href="/baixas.html">
+          <div class="bash-tems">
+            <div class="items-bach">
+              <div class="items-bash-image-content2"><img src="/icons/baixas.png" alt=""></div>
+              Baixas
+            </div>
+          </div>
+        </a>
+        <hr style="height: 2px; background-color: rgb(3,222,151); border: none;">
 
+        <div class="image-content">
+          <div class="image-box"></div>
         </div>
+      </div>
     </div>
-    
-    
-    <script src="/js/add.js"></script>
+
+    <div class="section-content">
+      <div class="title">
+        <div class="title-image-content">
+          <img src="/icons/LogoGreenly.png" alt="">
+        </div>
+      </div>
+
+      <div class="items-content">
+        <div class="items">
+          <div class="content-items" onclick="openAddMenu()">
+            <div class="text-content">
+              <div><p>Adicionar</p></div>
+            </div>
+            <div class="items-content-image1">
+              <div class="items-image-content1">
+                <img src="/icons/Símbolo de Adição Verde-fotor-bg-remover-2025050711116(1).png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="items">
+          <div class="content-items" onclick="exluideStock()">
+            <div class="text-content">
+              <div><p>Excluir</p></div>
+            </div>
+            <div class="items-content-image">
+              <div class="items-image-content">
+                <img src="/icons/Ícone de lixeira com X(1).png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="search-content">
+        <div class="search-content-input-content">
+          <div class="items-search-content">
+            <div class="input-search">
+              <div class="input-content">
+                <div class="input-items">
+                  <button class="button-search"><img src="/icons/Search icon.svg" alt=""></button>
+                  <input class="search" type="search" id="search" placeholder="Pesquise por Produtos">
+                </div>
+                <div class="input-ordenate">
+                  <div class="input-ordenate-button">
+                    <div class="ordenate-text">
+                      <p>Ordenar</p>
+                    </div>
+                    <hr>
+                    <div class="ordenate-button" id="ordenate-button">
+                      <img id="ordenate-image" src="/icons/image(1).png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-content">
+          <div class="product-stock-content" id="product-stock-content">
+            <div class="name-stock-content">
+              <div class="name-stock-content-name">Nome</div>
+              <div class="name-stock-content-id">Id</div>
+              <div class="name-stock-content-name">Grupo</div>
+              <div class="name-stock-content-name">Sub-Grupo</div>
+              <div class="name-stock-content-date">Data de Coleta</div>
+              <div class="name-stock-content-peso">Peso</div>
+            </div>
+            <div class="product-content-stock" id="product-content-stock">
+                
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="add-menu" id="add-menu">
+        <div class="close-add-menu">
+          <div class="close-image-content">
+            <img onclick="openAddMenu()" id="close" src="/icons/fechar.png" alt="">
+          </div>
+        </div>
+
+        <div class="add-menu-text">
+          <p>Adicionar Produto</p>
+        </div>
+
+        <div class="add-menu-content">
+          <div class="add-menu-content-inputs">
+            <label>
+              Nome
+              <input type="text" id="add-input-name" maxlength="15">
+            </label>
+            <label>
+              Id
+              <input type="text" id="add-input-id" disabled>
+            </label>
+          </div>
+
+          <div class="add-menu-content-inputs">
+            <label>
+              <p>Grupo</p>
+              <input type="text" id="add-input-Group" maxlength="14">
+            </label>
+            <label>
+              <p>Sub-Grupo</p>
+              <input type="text" id="add-input-Sub" maxlength="14">
+            </label>
+          </div>
+
+          <div class="add-menu-content-inputs">
+            <label>
+              <p>Data Coleta</p>
+              <input type="date" id="add-input-date">
+            </label>
+            <label>
+              <p>Peso</p>
+              <input type="number" id="add-input-peso" oninput="this.value = this.value.slice(0,3)">
+            </label>
+          </div>
+
+          <div class="add-btn">
+            <button class="btn-id" onclick="GerarId()" id="btn-cad">
+              <p>Gerar Id</p>
+            </button>
+            <button class="btn-cad" onclick="saveProduct()">
+              <p>Cadastrar</p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/add.js"></script>
 </body>
 </html>

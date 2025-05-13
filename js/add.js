@@ -162,6 +162,7 @@ function exluideStock() {
     });
 
 }
+// stock elements
 
 
 
